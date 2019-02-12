@@ -21,22 +21,26 @@ class App extends Component {
 
 
         <div className="row">
-          <div className="col s3 m3" />
-          <div className="col s6 m6">
-            <div className="card">
+          <div className="col s4 m4" >
             <br/><br/>
             <center>
               <Image src='./profile_photo_min.jpg' size='medium' circular style={{"display": "inline-block !important"}}/>
-              </center>
+            </center>
+          </div>
+          <div className="col s6 m6">
+            <br/><br/>
+            <br/><br/>
+            <div className="card">
               <div className="card-content">
-                <p>
-                  Full stack web developer with a passion for helping people.  With experience in Ruby on Rails, JavaScript, and React, and with a background in botany, my love for code began when I discovered the welcome challenge it gave me to utilize both logic and creativity. I bring strong skills in team-building and communication that help companies find strength in their diversity by building cohesion and momentum. A first-generation immigrant with love for betterment, I am steadfast against adversity.
-
+                <p id="blurb">
+                Hello, Person! <br />
+                  I am a software developer in the DMV, with proficiency in Ruby on Rails (Full Stack) && JS / ReactJS. I am in the process of adding C# / ASP.NET to my repertoire. I am interested<br />
+                Regards, and wishing you peace, <br />
+                Bruno
                 </p>
               </div>
             </div>
           </div>
-          <div className="col s3 m3" />
         </div>
         
       </div>
