@@ -7,9 +7,11 @@ class Blog extends Component {
         win.focus();
     }
 
+    // TODO: <a > tag functionality!
+
     render() {
         return (
-                <div className="ui card" onClick={this.openInNewTab}>
+                <div className="ui card tarjeta" onClick={this.openInNewTab}>
                     <div className="content">
                         <div className="header">{this.props.title}</div>
                         <div className="meta">

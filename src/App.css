@@ -6,8 +6,16 @@
 #selectedBlogs {
   font-size: 1.5em;
   color: #009A8A;
-
 }
+
 #image {
   float: right;
+}
+
+.tarjeta:hover {
+  background-color: #009A8A !important;
+}
+
+.tarjeta:active {
+  background-color: #007D9A !important; 
 }
