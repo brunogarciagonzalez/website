@@ -1,8 +1,13 @@
-#blurb {
+.blurbStyle {
   font-size: 1.5em;
   color: gray;
 }
 
+#selectedBlogs {
+  font-size: 1.5em;
+  color: #009A8A;
+
+}
 #image {
   float: right;
 }
