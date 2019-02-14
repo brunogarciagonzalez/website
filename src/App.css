@@ -2,3 +2,7 @@
   font-size: 1.5em;
   color: gray;
 }
+
+#image {
+  float: right;
+}
