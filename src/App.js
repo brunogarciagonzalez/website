@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import Feed from "rss-to-json";
-import {BrowserRouter, Route} from "react-router-dom";
+import {BrowserRouter, Route, Switch, Redirect} from "react-router-dom";
 import './App.css';
 import Navbar from './components/Navbar.js'
 import HeroBlurb from './components/HeroBlurb.js'
@@ -25,22 +25,24 @@ class App extends Component {
     
   }
 
-  // catch-all route to redirect to home
   render() {
     return (
       <BrowserRouter>
         <div className="App">
         <Navbar />
-        <Route exact path="/" render={() => (
-          <Fragment>
-            <HeroBlurb />
-            <BlogList blogs={this.state.blogs}/>
-          </Fragment>
-          ) }
-        />
-        <Route exact path="/portfolio" component={Portfolio} />
-        <Route exact path="/contact" component={Contact} />
-        <Route exact path="/about" component={About} />
+        <Switch>
+          <Route exact path="/" render={() => (
+            <Fragment>
+              <HeroBlurb />
+              <BlogList blogs={this.state.blogs}/>
+            </Fragment>
+            ) }
+          />
+          <Route exact path="/portfolio" component={Portfolio} />
+          <Route exact path="/contact" component={Contact} />
+          <Route exact path="/about" component={About} />
+          <Route path="/*" component={() => (<Redirect to="/" />)} />
+        </Switch>
         </div>
       </BrowserRouter>
     );
