@@ -12,7 +12,7 @@ class BlogList extends Component {
             <div className="row">
                 <div className="col s1 m1" />
                 <div className="col s10 m10">
-                    <h3 id="selectedBlogs">Selected Blogs</h3>
+                    <h3 id="selectedBlogs">Selected Blog Posts</h3>
                     <br /> <br />
                     <div className="row">
                     
@@ -20,7 +20,7 @@ class BlogList extends Component {
                         <div className="col s10 m10">
                             <div className="ui cards">
                                 {this.props.blogs.map(blog => {
-                                    return <Blog title={blog.title} date={this.buildDate(blog.created)} url={blog.url} />
+                                    return <Blog key={blog.title} title={blog.title} date={this.buildDate(blog.created)} url={blog.url} />
                                 })}
                             </div>
                         </div>

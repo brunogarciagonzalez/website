@@ -14,8 +14,20 @@
 
 .tarjeta:hover {
   background-color: #009A8A !important;
+  cursor: pointer !important;
+
 }
 
 .tarjeta:active {
   background-color: #007D9A !important; 
+  cursor: pointer !important;
+
+}
+
+#Root:hover {
+  color: #007D9A !important;
+  cursor: pointer !important;
+}
+
+li a:hover {
 }
