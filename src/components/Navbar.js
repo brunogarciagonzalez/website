@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import {Redirect} from "react-router-dom";
 
-
 const originalState = {
     toRoot: false,
     toPortfolio: false,
-    toResume: false,
     toContact: false,
     toAbout: false
 }
@@ -18,7 +16,12 @@ class Navbar extends Component {
         let keyString = `to${e.currentTarget.id}`;
         let stateCopy = {...this.state};
         stateCopy[keyString] = true;
-        this.setState(stateCopy, () => this.setState(originalState))
+        this.setState(stateCopy, () => this.setState(originalState));
+    }
+
+    handleResumeClick = (e) => {
+        e.preventDefault();
+        window.open("./need_update_resume.pdf", "_blank");
     }
 
     render() {
@@ -27,8 +30,6 @@ class Navbar extends Component {
             return <Redirect to="/" />
         } else if (this.state.toPortfolio) {
             return <Redirect to="/portfolio" />
-        } else if (this.state.toResume) {
-            return <Redirect to="/resume" />
         } else if (this.state.toContact) {
             return <Redirect to="/contact" />
         } else if (this.state.toAbout) {
@@ -46,7 +47,7 @@ class Navbar extends Component {
                         <li id="Portfolio" onClick={this.handleLinkClick}><a href="/portfolio" >Portfolio</a></li>
                         </ul>
                         <ul id="nav-mobile" className="right hide-on-med-and-down">
-                        <li id="Resume" onClick={this.handleLinkClick}><a href="/resume" >Resume</a></li>
+                        <li id="Resume" onClick={this.handleResumeClick}><a href="/resume" >Resume</a></li>
                         <li id="Contact" onClick={this.handleLinkClick}><a href="/contact" >Contact</a></li>
                         <li id="About" onClick={this.handleLinkClick}><a href="/about" >About</a></li>
                         </ul>

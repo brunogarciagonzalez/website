@@ -8,7 +8,6 @@ import BlogList from './components/BlogList.js'
 import Portfolio from './components/Portfolio.js'
 import Contact from './components/Contact.js'
 import About from './components/About.js'
-import Resume from './components/Resume.js'
 
 
 class App extends Component {
@@ -42,7 +41,6 @@ class App extends Component {
         <Route exact path="/portfolio" component={Portfolio} />
         <Route exact path="/contact" component={Contact} />
         <Route exact path="/about" component={About} />
-        <Route exact path="/resume" component={Resume} />
         </div>
       </BrowserRouter>
     );
