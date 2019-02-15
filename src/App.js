@@ -12,7 +12,8 @@ import About from './components/About.js'
 
 class App extends Component {
   state = {
-    blogs: []
+    blogs: [],
+    blogsLoading: true
     }
 
   componentDidMount() {
@@ -20,7 +21,7 @@ class App extends Component {
     let targetUrl = "https://medium.com/feed/@brunogarciagonzalez";
 
     Feed.load(proxyUrl + targetUrl, (err, rss) => {
-      this.setState({blogs: rss.items}, () => console.log("state:", this.state))
+      this.setState({blogs: rss.items, blogsLoading: false}, () => console.log("state:", this.state))
     })
     
   }
@@ -34,7 +35,7 @@ class App extends Component {
           <Route exact path="/" render={() => (
             <Fragment>
               <HeroBlurb />
-              <BlogList blogs={this.state.blogs}/>
+              <BlogList blogs={this.state.blogs} loading={this.state.blogsLoading}/>
             </Fragment>
             ) }
           />

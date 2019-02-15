@@ -15,16 +15,24 @@ class BlogList extends Component {
                     <h3 id="selectedBlogs">Selected Blog Posts</h3>
                     <br /> <br />
                     <div className="row">
-                    
-                        <div className="col s1 m1" />
-                        <div className="col s10 m10">
-                            <div className="ui cards">
-                                {this.props.blogs.map(blog => {
-                                    return <Blog key={blog.title} title={blog.title} date={this.buildDate(blog.created)} url={blog.url} />
-                                })}
+                        {this.props.loading ?
+                            <div class="ui active centered inline loader"></div>
+                            :
+                            <React.Fragment>
+
+                            <div className="col s1 m1" />
+                            <div className="col s10 m10">
+                                <div className="ui cards">
+                                    {this.props.blogs.map(blog => {
+                                        return <Blog key={blog.title} title={blog.title} date={this.buildDate(blog.created)} url={blog.url} />
+                                    })}
+                                </div>
                             </div>
-                        </div>
-                         <div className="col s1 m1" />
+                             <div className="col s1 m1" />
+                        </React.Fragment>
+                            
+                    
+                    }
                     
                     </div>
 
