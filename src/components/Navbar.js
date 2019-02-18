@@ -44,12 +44,11 @@ class Navbar extends Component {
                         <li><a href="https://github.com/brunogarciagonzalez" target="_blank" rel="noopener noreferrer">GitHub</a></li>
                         <li><a href="https://www.linkedin.com/in/garcia-gonzalez/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
                         <li><a href="https://medium.com/@brunogarciagonzalez" target="_blank" rel="noopener noreferrer">Blog</a></li>
-                        <li id="Portfolio" onClick={this.handleLinkClick}><a href="/portfolio" >Portfolio</a></li>
                         </ul>
                         <ul id="nav-mobile" className="right hide-on-med-and-down">
+                        <li id="Portfolio" onClick={this.handleLinkClick}><a href="/portfolio" >Portfolio</a></li>
                         <li id="Resume" onClick={this.handleResumeClick}><a href="/resume" >Resume</a></li>
                         <li id="Contact" onClick={this.handleLinkClick}><a href="/contact" >Contact</a></li>
-                        <li id="About" onClick={this.handleLinkClick}><a href="/about" >About</a></li>
                         </ul>
                     </div>
                 </nav>    
@@ -58,3 +57,5 @@ class Navbar extends Component {
 }
 
 export default Navbar;
+
+{/* <li id="About" onClick={this.handleLinkClick}><a href="/about" >About</a></li> */}
