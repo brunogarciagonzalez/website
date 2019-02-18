@@ -29,5 +29,6 @@
   cursor: pointer !important;
 }
 
-li a:hover {
+.contact-body {
+  font-size: 1.5em;
 }
