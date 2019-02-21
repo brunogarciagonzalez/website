@@ -18,7 +18,7 @@ class HeroBlurb extends Component {
                         <div className="card">
                             <div className="card-content">
                                 <p className="blurbStyle">
-                                    Hello, Person! <br /><br />
+                                    Hello! <br /><br />
                                     I am a software developer in the DMV, with proficiency in Ruby on Rails && ReactJS. Professionally, I am interested in backend development; beyond that, I am interested in original projects and noble causes. I am also in the process of adding C# / ASP.NET to my repertoire.  <br /><br />
                                     Regards, and wishing you peace, <br />
                                     Bruno
