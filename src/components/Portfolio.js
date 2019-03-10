@@ -1,22 +1,31 @@
 import React, { Component } from 'react';
 import { Accordion, Message } from 'semantic-ui-react';
-
+import projects from "../projects.js";
 
 class Portfolio extends Component {
 
     panels = () => {
-        let max = 3;
-        let panelsArr = []
-        for (let i = 0; i < max; i++) {        
-            panelsArr.push(
-                {
+        return projects.map((project, i) => {
+             return   {
                     key: `panel-${i}`,
-                    title: {content: <span className="blurbStyle">{`title number ${i}`}</span>},
-                    content: { content: <Message>testing</Message>}
+                    title: {content: <span className="blurbStyle">{project.title}</span>},
+                    content: { content: 
+                        <Message>
+                            {project.description}
+                            <br/>
+                            <center>
+                                <iframe title={project.title}
+                                    width="560" 
+                                    height="315" 
+                                    src={project.demo} 
+                                    frameBorder="0" 
+                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowFullScreen>
+                                </iframe>
+                            </center>
+                        </Message> }
                 }
-            )  
-        }
-        return panelsArr;
+        }); 
     }
 
     render() {
@@ -32,6 +41,10 @@ class Portfolio extends Component {
                         panels={this.panels()}
                     />
                 </div>
+                <br /><br />
+                <br /><br />
+                <br /><br />
+                <br /><br />
                 <div className="col s1 m1" />
             </div>
         )
