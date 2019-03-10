@@ -11,7 +11,7 @@ class Portfolio extends Component {
             panelsArr.push(
                 {
                     key: `panel-${i}`,
-                    title: `title number ${i}`,
+                    title: {content: <span className="blurbStyle">{`title number ${i}`}</span>},
                     content: { content: <Message>testing</Message>}
                 }
             )  
