@@ -21,7 +21,7 @@ class App extends Component {
     let targetUrl = "https://medium.com/feed/@brunogarciagonzalez";
 
     Feed.load(proxyUrl + targetUrl, (err, rss) => {
-      this.setState({blogs: rss.items, blogsLoading: false}, () => console.log("state:", this.state))
+      this.setState({blogs: rss.items, blogsLoading: false})
     })
     
   }
