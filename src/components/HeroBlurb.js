@@ -11,7 +11,7 @@ class HeroBlurb extends Component {
           <br />
           <span id="image">
             <Image
-              src="/website/profile_photo_min.jpg"
+              src="/profile_photo_min.jpg"
               size="medium"
               circular
               style={{ display: "inline-block !important" }}

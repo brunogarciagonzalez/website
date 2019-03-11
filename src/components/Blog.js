@@ -17,7 +17,7 @@ class Blog extends Component {
           <img
             alt="paragraph wireframe"
             className="ui wireframe image"
-            src="/website/paragraph_wireframe.png"
+            src="/paragraph_wireframe.png"
           />
           <p />
         </div>
