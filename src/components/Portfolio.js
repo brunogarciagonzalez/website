@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Accordion, Message } from 'semantic-ui-react';
 import projects from "../projects.js";
-import ProjectCarousel from "./ProjectCarousel"
 
 class Portfolio extends Component {
 
@@ -14,22 +13,26 @@ class Portfolio extends Component {
                         <Message>
                             <br/><br/>
                             <center>
-                                <ProjectCarousel width="560" images={project.images}/>    
+                                {
+                                    project.hasDemo ?
+                                    <iframe title={project.title}
+                                        width="560" 
+                                        height="315" 
+                                        src={project.demo} 
+                                        frameBorder="0" 
+                                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowFullScreen>
+                                    </iframe>
+                                    :
+                                    <img width="560" src={project.image} alt={`${project.title} homepage`}/>
+                                }
                             </center>
+                            <br /><br />
                             {project.description}
                             <br/>
                             <br/>
-                            {/* {<center>
-                                <iframe title={project.title}
-                                    width="560" 
-                                    height="315" 
-                                    src={project.demo} 
-                                    frameBorder="0" 
-                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-                                    allowFullScreen>
-                                </iframe>
-                            </center>} */}
-                        </Message> }
+                        </Message> 
+                        }
                 }
         }); 
     }

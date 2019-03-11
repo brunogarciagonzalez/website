@@ -1,11 +1,11 @@
 import React from "react";
-import ProjectCarousel from "./components/ProjectCarousel";
 
 export default [
     {
         title: "LinkShare",
-        demo: "",
-        images: [],
+        hasDemo: true,
+        demo: "https://www.youtube.com/embed/5IODtglMM_0",
+        image: "",
         description: <div><p>
             This 3-week project is powered by a Ruby on Rails (API), ReactJS,
             and Semantic UI.
@@ -56,8 +56,9 @@ export default [
     },
     {
         title: "WeatherScript",
-        demo: "",
-        images: [],
+        hasDemo: true,
+        demo: "https://www.youtube.com/embed/JaiPIwGPMKY",
+        image: "",
         description: <div><p>
             This 1-week project is powered by Ruby on Rails (API), ReactJS, and Semantic UI. This was a partner-project with <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/ryan-youngdale-508562112/">Ryan Youngdale</a> as we were learning ReactJS.
             </p>
@@ -81,9 +82,10 @@ export default [
     },
     {
         title: "CryptoHome",
+        hasDemo: false,
         demo: "",
-        images: [{url: "https://raw.githubusercontent.com/brunogarciagonzalez/crypto-home-frontend/master/images/1.png", description: null}],
-        description: <div><br/><br/><p>
+        image: "https://raw.githubusercontent.com/brunogarciagonzalez/crypto-home-frontend/master/images/1.png",
+        description: <div><p>
             This 1-week project is powered by Ruby on Rails (API) and vanilla JS. This was a partner-project with <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/jerry-w-lee/">Jerry Lee</a> as we were learning JS fundamentals.
             </p>
             <p>
