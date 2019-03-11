@@ -10,7 +10,7 @@ class HeroBlurb extends Component {
                         <br /><br />
                         <br />
                         <span id="image">
-                        <Image src="%PUBLIC_URL%/website/profile_photo_min.jpg" size='medium' circular style={{ "display": "inline-block !important" }} />
+                        <Image src="brunogarciagonzalez.github.io/website/profile_photo_min.jpg" size='medium' circular style={{ "display": "inline-block !important" }} />
                         </span>
                     </div>
                     <div className="col s7 m7">
