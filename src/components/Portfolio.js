@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Accordion, Message } from 'semantic-ui-react';
 import projects from "../projects.js";
+import ProjectCarousel from "./ProjectCarousel"
 
 class Portfolio extends Component {
 
@@ -11,9 +12,14 @@ class Portfolio extends Component {
                     title: {content: <span className="blurbStyle">{project.title}</span>},
                     content: { content: 
                         <Message>
+                            <br/><br/>
+                            <center>
+                                <ProjectCarousel width="560" images={project.images}/>    
+                            </center>
                             {project.description}
                             <br/>
-                            <center>
+                            <br/>
+                            {/* {<center>
                                 <iframe title={project.title}
                                     width="560" 
                                     height="315" 
@@ -22,7 +28,7 @@ class Portfolio extends Component {
                                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
                                     allowFullScreen>
                                 </iframe>
-                            </center>
+                            </center>} */}
                         </Message> }
                 }
         }); 

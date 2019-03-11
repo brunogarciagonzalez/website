@@ -1,9 +1,11 @@
 import React from "react";
+import ProjectCarousel from "./components/ProjectCarousel";
 
 export default [
     {
         title: "LinkShare",
-        demo: "https://www.youtube.com/embed/9OvU9JicNrw",
+        demo: "",
+        images: [],
         description: <div><p>
             This 3-week project is powered by a Ruby on Rails (API), ReactJS,
             and Semantic UI.
@@ -54,17 +56,17 @@ export default [
     },
     {
         title: "WeatherScript",
-        demo: "https://www.youtube.com/embed/9OvU9JicNrw",
+        demo: "",
+        images: [],
         description: <div><p>
-            This 1-week project is powered by a Ruby on Rails (API), ReactJS, Semantic UI, and the MetaWeather API. This was a partner-project with <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/ryan-youngdale-508562112/">Ryan Youngdale</a> as we were learning ReactJS.
+            This 1-week project is powered by Ruby on Rails (API), ReactJS, and Semantic UI. This was a partner-project with <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/ryan-youngdale-508562112/">Ryan Youngdale</a> as we were learning ReactJS.
             </p>
             <p>The concept-board for this project includes one thing:</p>
             <ol>
                 <li>Apple iPhone's built-in weather application</li>
             </ol>
             <p>
-                A weather application that utilizes the <a target="_blank"
-                    rel="noopener noreferrer" href="https://www.metaweather.com/api/">MetaWeather API</a> to showcase 5-day forecasts. API calls to MetaWeather are done through a Rails API application, and memoization is employed therein to minimize calls to MetaWeather. A simple (non-auth) login system is employed to allow users to manage favorite cities, by adding and removing. Finally, the Zomato API was utilized to give users some extra information (best restaurants in the city whose weather is being looked at).
+                A weather application that utilizes the <a target="_blank" rel="noopener noreferrer" href="https://www.metaweather.com/api/">MetaWeather API</a> to showcase 5-day forecasts. API calls to MetaWeather are done through a Rails API application, and memoization is employed therein to minimize calls to MetaWeather. A simple (non-secure) login system is employed to allow users to manage favorite cities, allowing the addition and removal of cities from "My Cities". Finally, the Zomato API was utilized to give users some extra information: best restaurants in the city whose weather is being looked at.
             </p>
             <p style={{ textAlign: "center" }}>
                [ <a
@@ -79,12 +81,13 @@ export default [
     },
     {
         title: "CryptoHome",
-        demo: "https://www.youtube.com/embed/9OvU9JicNrw",
-        description: <div><p>
-            This 1-week project is powered by a Ruby on Rails (API), vanilla JS, and API. This was a partner-project with <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/jerry-w-lee/">Jerry Lee</a> as we were learning Javascript fundamentals.
+        demo: "",
+        images: [{url: "https://raw.githubusercontent.com/brunogarciagonzalez/crypto-home-frontend/master/images/1.png", description: null}],
+        description: <div><br/><br/><p>
+            This 1-week project is powered by Ruby on Rails (API) and vanilla JS. This was a partner-project with <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/jerry-w-lee/">Jerry Lee</a> as we were learning JS fundamentals.
             </p>
             <p>
-                A weather application that utilizes the <a target="_blank" rel="noopener noreferrer" href="https://www.metaweather.com/api/">... API</a> to showcase 5-day forecasts. API calls to MetaWeather are done through a Rails API application, and memoization is employed therein to minimize calls to MetaWeather. A simple (non-auth) login system is employed to allow users to manage favorite cities, by adding and removing. Finally, the Zomato API was utilized to give users some extra information (best restaurants in the city whose weather is being looked at).
+                A single-page application that utilizes the <a target="_blank" rel="noopener noreferrer" href="https://min-api.cryptocompare.com/">CryptoCompare API</a> and PlotlyJS to showcase charted price histories of Bitcoin, Ethereum, and Ripple. The CryptoCompare API is leveraged once more to show live trade prices for the three aforementioned crypto currencies, by employing SocketsIO. ActionCable (Web Sockets) are employed to allow for a real-time chat between users. A simple (non-secure) login system is employed to allow users to take part in the chat feature.
             </p>
             <p style={{ textAlign: "center" }}>
                 [ <a
