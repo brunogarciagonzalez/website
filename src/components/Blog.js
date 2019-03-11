@@ -16,7 +16,7 @@ class Blog extends Component {
                             {this.props.date}
                         </div>
                         <br /><br />
-                        <img alt="paragraph wireframe" className="ui wireframe image" src="./paragraph_wireframe.png"></img>
+                        <img alt="paragraph wireframe" className="ui wireframe image" src="%PUBLIC_URL%/favicon.ico"></img>
                         <p></p>
                     </div>
                </div>

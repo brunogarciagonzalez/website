@@ -21,7 +21,7 @@ class Navbar extends Component {
 
     handleResumeClick = (e) => {
         e.preventDefault();
-        window.open("./BrunoGarciaGonzalez_resume.pdf", "_blank");
+        window.open("%PUBLIC_URL%/BrunoGarciaGonzalez_resume.pdf", "_blank");
     }
 
     render() {
