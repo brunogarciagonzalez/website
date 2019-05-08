@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import Feed from "rss-to-json";
+// import Feed from "rss-to-json";
 import {BrowserRouter, Route, Switch, Redirect} from "react-router-dom";
 import './App.css';
 import Navbar from './components/Navbar.js'
@@ -17,13 +17,21 @@ class App extends Component {
     }
 
   componentDidMount() {
-    let proxyUrl = "https://cors-anywhere.herokuapp.com/";
-    let targetUrl = "https://medium.com/feed/@brunogarciagonzalez";
-
-    Feed.load(proxyUrl + targetUrl, (err, rss) => {
-      this.setState({blogs: rss.items, blogsLoading: false})
-    })
+    // let proxyUrl = "https://cors-anywhere.herokuapp.com/";
+    // let targetUrl = "https://medium.com/feed/@brunogarciagonzalez";
+    // Feed.load(proxyUrl + targetUrl, (err, rss) => {
+    //   this.setState({blogs: rss.items, blogsLoading: false})
+    // })
+    let blogs = [
+      {url: "https://medium.com/@brunogarciagonzalez/brief-intr…ernet-396f7f91df92?source=rss-7ba0947c0034------2",
+      title: "TLDR: Architecture of the Internet",
+      created: 1551742055000},
+      {url: "https://medium.com/@brunogarciagonzalez/reactjs-ev…ation-a295505016f1?source=rss-7ba0947c0034------2",
+      title: 'ReactJS Events: “Pooling”, “Nullification”, & event.persist()',
+      created: 1550079510000}
+    ];
     
+    setTimeout(()=>this.setState({blogs, blogsLoading: false}), 500)
   }
 
   render() {
