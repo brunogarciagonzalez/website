@@ -2,7 +2,7 @@ import React from "react";
 
 export default [
   {
-    title: "Company Webpage: Monday Home Improvement, LLC.",
+    title: "Monday Home Improvement, LLC.",
     hasDemo: false,
     demo: "",
     image:
