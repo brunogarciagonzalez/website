@@ -103,7 +103,7 @@ class Navbar extends Component {
               onClick={this.handleLinkClick}
               className="brand-logo center"
             >
-              Bruno I. Garcia Gonzalez
+              {this.props.size === "small" ? "Bruno I. Garcia Gonzalez" : "Bruno G.G."}
             </span>
             <ul id="nav-mobile" className="left">
               <li>

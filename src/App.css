@@ -7,6 +7,27 @@
   float: right;
 }
 
+#email {
+  word-wrap: break-word;
+}
+
+.portfolioIFrameShowSmall {
+  width: 80%;
+}
+
+.portfolioIFrameShowRegular {
+  width: 560px;
+  height: 315px;
+}
+
+.portfolioImageShowSmall {
+  width: 80%;
+}
+
+.portfolioImageShowRegular {
+  width: 560px;
+}
+
 .dropDownItem a {
   color: #009A8A !important;
 }

@@ -4,6 +4,7 @@ import projects from "../projects.js";
 
 class Portfolio extends Component {
   panels = () => {
+    console.log("portfolio", this.props.size)
     return projects.map((project, i) => {
       return {
         key: `panel-${i}`,
@@ -15,18 +16,15 @@ class Portfolio extends Component {
               <br />
               <center>
                 {project.hasDemo ? (
-                  <iframe
+                  <iframe className={this.props.size === "regular" ? "portfolioIFrameShowRegular" : "portfolioIFrameShowSmall"}
                     title={project.title}
-                    width="560"
-                    height="315"
                     src={project.demo}
                     frameBorder="0"
                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
                   />
                 ) : (
-                  <img
-                    width="560"
+                  <img className={this.props.size === "regular" ? "portfolioImageShowRegular" : "portfolioImageShowSmall"}
                     src={project.image}
                     alt={`${project.title} homepage`}
                   />
@@ -75,3 +73,7 @@ class Portfolio extends Component {
 }
 
 export default Portfolio;
+
+
+// width={this.props.size === "regular" ? "560" : "80%"}
+// height={this.props.size === "regular" ? "315" : null}
