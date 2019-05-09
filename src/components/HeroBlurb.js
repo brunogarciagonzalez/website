@@ -8,9 +8,22 @@ class HeroBlurb extends Component {
       return (
         <div>
           <div className="row">
+            <div className="row">
+              <div className="col" style={{width:"100%"}}>
+                <br />
+                <br />
+                <br />
+                <center><span>
+                  <Image
+                    src="/profile_photo_min.jpg"
+                    size="medium"
+                    circular
+                    style={{ display: "inline-block !important"}}
+                  />
+                </span></center>
+              </div>
+            </div>
             <div className="col">
-              <br />
-              <br />
               <div className="card">
                 <div className="card-content">
                   <p className="blurbStyle">
@@ -30,18 +43,7 @@ class HeroBlurb extends Component {
               </div>
             </div>
           </div>
-          <div className="row">
-            <div className="col" style={{width:"100%"}}>
-              <center><span>
-                <Image
-                  src="/profile_photo_min.jpg"
-                  size="medium"
-                  circular
-                  style={{ display: "inline-block !important"}}
-                />
-              </span></center>
-            </div>
-          </div>
+
         </div>
       );
     } else {
