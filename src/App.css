@@ -1,8 +1,3 @@
-.blurbStyle {
-  font-size: 1.5em;
-  color: gray;
-}
-
 #selectedBlogs {
   font-size: 1.5em;
   color: #009A8A;
@@ -12,6 +7,23 @@
   float: right;
 }
 
+.dropDownItem a {
+  color: #009A8A !important;
+}
+
+.blurbStyle {
+  font-size: 1.5em;
+  color: gray;
+}
+
+.contact-body {
+  font-size: 1.5em;
+}
+
+.dropDownItem a:hover {
+  color: #007D9A !important;
+}
+
 .tarjeta:hover {
   background-color: #009A8A !important;
   cursor: pointer !important;
@@ -19,16 +31,11 @@
 }
 
 .tarjeta:active {
-  background-color: #007D9A !important; 
+  background-color: #007D9A !important;
   cursor: pointer !important;
-
 }
 
 #Root:hover {
   color: #007D9A !important;
   cursor: pointer !important;
-}
-
-.contact-body {
-  font-size: 1.5em;
 }
