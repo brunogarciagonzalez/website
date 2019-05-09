@@ -9,9 +9,11 @@ import Portfolio from './components/Portfolio.js'
 import Contact from './components/Contact.js'
 import About from './components/About.js'
 
+const getSize = () => window.innerWidth > 889 ? "regular" : "small"
 
 class App extends Component {
   state = {
+    size: getSize(),
     blogs: [],
     blogsLoading: true
     }
@@ -22,6 +24,15 @@ class App extends Component {
     // Feed.load(proxyUrl + targetUrl, (err, rss) => {
     //   this.setState({blogs: rss.items, blogsLoading: false})
     // })
+    // event listener on window resize
+    window.onresize = () => {
+      console.log("app size: ", window.innerWidth)
+      window.innerWidth > 889 ?
+      this.setState({size: "regular"})
+      :
+      this.setState({size: "small"})
+    }
+
     let blogs = [
       {url: "https://medium.com/@brunogarciagonzalez/brief-intr…ernet-396f7f91df92?source=rss-7ba0947c0034------2",
       title: "TLDR: Architecture of the Internet",
@@ -30,7 +41,7 @@ class App extends Component {
       title: 'ReactJS Events: “Pooling”, “Nullification”, & event.persist()',
       created: 1550079510000}
     ];
-    
+
     setTimeout(()=>this.setState({blogs, blogsLoading: false}), 500)
   }
 
@@ -38,7 +49,7 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div className="App">
-        <Navbar />
+        <Navbar size={this.state.size}/>
         <Switch>
           <Route exact path="/" render={() => (
             <Fragment>

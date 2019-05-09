@@ -5,7 +5,6 @@ import { Dropdown } from "semantic-ui-react";
 const originalState = () => {
   return(
     {
-      size: window.innerWidth > 889 ? "regular" : "small",
       toRoot: false,
       toPortfolio: false,
       toContact: false,
@@ -30,17 +29,6 @@ class Navbar extends Component {
     window.open("/BrunoGarciaGonzalez_resume.pdf", "_blank");
   };
 
-  componentDidMount() {
-    // event listener on window resize
-    window.onresize = () => {
-      console.log("size: ", window.innerWidth)
-      window.innerWidth > 889 ?
-      this.setState({size: "regular"})
-      :
-      this.setState({size: "small"})
-    }
-  }
-
   render() {
     if (this.state.toRoot) {
       return <Redirect to="/" />;
@@ -52,7 +40,7 @@ class Navbar extends Component {
       return <Redirect to="/about" />;
     }
 
-    if (this.state.size === "regular") {
+    if (this.props.size === "regular") {
       return (
         <nav>
           <div className="nav-wrapper teal">
