@@ -27,10 +27,15 @@ class App extends Component {
     // event listener on window resize
     window.onresize = () => {
       console.log("app size: ", window.innerWidth)
-      window.innerWidth > 889 ?
-      this.setState({size: "regular"})
-      :
-      this.setState({size: "small"})
+      if (window.innerWidth > 889) {
+        this.setState({size: "regular"})
+
+      } else if (window.innerWidth > 618) {
+        this.setState({size: "small"})
+      } else {
+        this.setState({size: "x-small"})
+      }
+
     }
 
     let blogs = [
@@ -58,8 +63,8 @@ class App extends Component {
             </Fragment>
             ) }
           />
-          <Route exact path="/portfolio" component={Portfolio} />
-          <Route exact path="/contact" component={Contact} />
+          <Route exact path="/portfolio" component={() => (<Portfolio size={this.state.size}/>)} />
+          <Route exact path="/contact" component={() => (<Contact size={this.state.size}/>)} />
           <Route exact path="/about" component={About} />
           <Route path="/*" component={() => (<Redirect to="/" />)} />
         </Switch>
