@@ -9,7 +9,15 @@ import Portfolio from './components/Portfolio.js'
 import Contact from './components/Contact.js'
 // import About from './components/About.js'
 
-const getSize = () => window.innerWidth > 889 ? "regular" : "small"
+const getSize = () => {
+  if (window.innerWidth > 889) {
+    return "regular";
+  } else if (window.innerWidth > 618) {
+    return "small";
+  } else {
+    return "x-small";
+  }
+}
 
 class App extends Component {
   state = {
@@ -58,7 +66,7 @@ class App extends Component {
         <Switch>
           <Route exact path="/" render={() => (
             <Fragment>
-              <HeroBlurb />
+              <HeroBlurb size={this.state.size}/>
               <BlogList blogs={this.state.blogs} loading={this.state.blogsLoading}/>
             </Fragment>
             ) }
