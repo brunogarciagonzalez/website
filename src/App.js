@@ -7,7 +7,7 @@ import HeroBlurb from './components/HeroBlurb.js'
 import BlogList from './components/BlogList.js'
 import Portfolio from './components/Portfolio.js'
 import Contact from './components/Contact.js'
-import About from './components/About.js'
+// import About from './components/About.js'
 
 const getSize = () => window.innerWidth > 889 ? "regular" : "small"
 
@@ -65,7 +65,6 @@ class App extends Component {
           />
           <Route exact path="/portfolio" component={() => (<Portfolio size={this.state.size}/>)} />
           <Route exact path="/contact" component={() => (<Contact size={this.state.size}/>)} />
-          <Route exact path="/about" component={About} />
           <Route path="/*" component={() => (<Redirect to="/" />)} />
         </Switch>
         </div>
@@ -75,3 +74,5 @@ class App extends Component {
 }
 
 export default App;
+
+// <Route exact path="/about" component={About} />
