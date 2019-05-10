@@ -31,7 +31,7 @@ class HeroBlurb extends Component {
                     <br />
                     I am a software developer in the DMV, with proficiency in Ruby
                     on Rails && ReactJS and a passion for backend development.
-                    I am interested in constributing to great products, original projects, and noble causes.
+                    I am interested in contributing to great products, original projects, and noble causes.
 
                     I am a lifelong student who excels at building workplace cohesion through my strong communication skills and positive energy, and can fit well within various team dynamics.
                      <br />
