@@ -27,6 +27,7 @@ class App extends Component {
     }
 
   componentDidMount() {
+    console.log("Coded by Bruno Garcia Gonzalez © 2019")
     // let proxyUrl = "https://cors-anywhere.herokuapp.com/";
     // let targetUrl = "https://medium.com/feed/@brunogarciagonzalez";
     // Feed.load(proxyUrl + targetUrl, (err, rss) => {
@@ -34,17 +35,23 @@ class App extends Component {
     // })
     // event listener on window resize
     window.onresize = () => {
-      console.log("app size: ", window.innerWidth)
-      if (window.innerWidth > 889) {
-        this.setState({size: "regular"})
+      let shouldBeRegular = window.innerWidth > 889;
+      let isRegular = this.state.size === "regular";
+      let shouldBeSmall = (window.innerWidth > 618) && (window.innerWidth <= 889);
+      let isSmall = this.state.size === "small";
+      let shouldBeXtraSmall = window.innerWidth <= 618;
+      let isXtraSmall = this.state.size === "x-small";
 
-      } else if (window.innerWidth > 618) {
+      if (shouldBeRegular && !isRegular) {
+        this.setState({size: "regular"});
+      } else if (shouldBeSmall && !isSmall) {
         this.setState({size: "small"})
+      } else if (shouldBeXtraSmall && !isXtraSmall){
+          this.setState({size: "x-small"});
       } else {
-        this.setState({size: "x-small"})
+        //
       }
-
-    }
+    };
 
     let blogs = [
       {url: "https://medium.com/@brunogarciagonzalez/brief-intr…ernet-396f7f91df92?source=rss-7ba0947c0034------2",
@@ -55,7 +62,7 @@ class App extends Component {
       created: 1550079510000}
     ];
 
-    setTimeout(()=>this.setState({blogs, blogsLoading: false}), 500)
+    setTimeout(()=>this.setState({blogs, blogsLoading: false}), 500);
   }
 
   render() {
