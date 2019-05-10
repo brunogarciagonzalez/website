@@ -156,6 +156,4 @@ class Navbar extends Component {
 
 export default Navbar;
 
-{
-  /* <li id="About" onClick={this.handleLinkClick}><a href="/about" >About</a></li> */
-}
+// <li id="About" onClick={this.handleLinkClick}><a href="/about" >About</a></li>
