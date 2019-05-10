@@ -4,7 +4,6 @@ import projects from "../projects.js";
 
 class Portfolio extends Component {
   panels = () => {
-    console.log("portfolio", this.props.size)
     return projects.map((project, i) => {
       return {
         key: `panel-${i}`,
