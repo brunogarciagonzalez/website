@@ -3,14 +3,12 @@ import { Redirect } from "react-router-dom";
 import { Dropdown } from "semantic-ui-react";
 
 const originalState = () => {
-  return(
-    {
-      toRoot: false,
-      toPortfolio: false,
-      toContact: false,
-      toAbout: false
-    }
-  )
+  return {
+    toRoot: false,
+    toPortfolio: false,
+    toContact: false,
+    toAbout: false
+  };
 };
 
 class Navbar extends Component {
@@ -26,7 +24,7 @@ class Navbar extends Component {
 
   handleResumeClick = e => {
     e.preventDefault();
-    window.open("/BrunoGarciaGonzalez_resume.pdf", "_blank");
+    window.open("/BrunoGarciaGonzalez_SoftwareEngineer_resume.pdf", "_blank");
   };
 
   render() {
@@ -103,44 +101,58 @@ class Navbar extends Component {
               onClick={this.handleLinkClick}
               className="brand-logo center"
             >
-              {this.props.size === "small" ? "Bruno I. Garcia Gonzalez" : "Bruno G.G."}
+              {this.props.size === "small"
+                ? "Bruno I. Garcia Gonzalez"
+                : "Bruno G.G."}
             </span>
             <ul id="nav-mobile" className="left">
               <li>
                 <a className="dropDownItem">
-                  <Dropdown item text='Menu'>
-                   <Dropdown.Menu>
-                     <a id="Resume" href="/resume"onClick={this.handleResumeClick}>
-                     <Dropdown.Item>Resume</Dropdown.Item>
-                     </a>
-                     <a
-                     href="https://www.linkedin.com/in/garcia-gonzalez/"
-                     target="_blank"
-                     rel="noopener noreferrer"
-                     >
-                      <Dropdown.Item>LinkedIn</Dropdown.Item>
-                     </a>
-                     <a
-                     href="https://github.com/brunogarciagonzalez"
-                     target="_blank"
-                     rel="noopener noreferrer"
-                     >
-                     <Dropdown.Item>GitHub</Dropdown.Item>
-                     </a>
-                     <a
-                       href="https://medium.com/@brunogarciagonzalez"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                     >
-                       <Dropdown.Item>Blog</Dropdown.Item>
-                     </a>
-                     <a id="Portfolio" href="/portfolio" onClick={this.handleLinkClick}>
-                      <Dropdown.Item>Portfolio</Dropdown.Item>
-                     </a>
-                     <a id="Contact" href="/contact" onClick={this.handleLinkClick}>
-                     <Dropdown.Item>Contact</Dropdown.Item>
-                     </a>
-                   </Dropdown.Menu>
+                  <Dropdown item text="Menu">
+                    <Dropdown.Menu>
+                      <a
+                        id="Resume"
+                        href="/resume"
+                        onClick={this.handleResumeClick}
+                      >
+                        <Dropdown.Item>Resume</Dropdown.Item>
+                      </a>
+                      <a
+                        href="https://www.linkedin.com/in/garcia-gonzalez/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Dropdown.Item>LinkedIn</Dropdown.Item>
+                      </a>
+                      <a
+                        href="https://github.com/brunogarciagonzalez"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Dropdown.Item>GitHub</Dropdown.Item>
+                      </a>
+                      <a
+                        href="https://medium.com/@brunogarciagonzalez"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Dropdown.Item>Blog</Dropdown.Item>
+                      </a>
+                      <a
+                        id="Portfolio"
+                        href="/portfolio"
+                        onClick={this.handleLinkClick}
+                      >
+                        <Dropdown.Item>Portfolio</Dropdown.Item>
+                      </a>
+                      <a
+                        id="Contact"
+                        href="/contact"
+                        onClick={this.handleLinkClick}
+                      >
+                        <Dropdown.Item>Contact</Dropdown.Item>
+                      </a>
+                    </Dropdown.Menu>
                   </Dropdown>
                 </a>
               </li>
@@ -149,8 +161,6 @@ class Navbar extends Component {
         </nav>
       );
     }
-
-
   }
 }
 
