@@ -1,5 +1,3 @@
 # Personal Website
 
-### LinkedIn
-### Github
-### Blog
+Development repo for my current personal website: [https//bruno.business](https//bruno.business)
