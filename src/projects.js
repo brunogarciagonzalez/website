@@ -14,15 +14,13 @@ export default [
           over a few weekends, and is the website for my father's business.
         </p>
         <p>
-          It was a great experience to incorporate his (and my mother's)
-          opinions into this project -- a sort of simulation of what being a
-          freelancer could be.
+          It was a great experience to build out his (and my mother's) ideas --
+          a sort of simulation of what being a freelancer could be.
         </p>
         <p>The concept board for the project included:</p>
         <ol>
-          <li>A modern look, with moving components</li>
-          <li>Sleek, but not corporate</li>
           <li>Friendly (intuitive) to older folk</li>
+          <li>A modern look, with moving components</li>
         </ol>
         <p style={{ textAlign: "center" }}>
           [{" "}
@@ -31,7 +29,7 @@ export default [
             rel="noopener noreferrer"
             href="https://mondayhome.us"
           >
-            Live Webpage!
+            Live Webpage
           </a>
           {" // "}
           <a
