@@ -10,26 +10,11 @@ export default [
       description: (
         <div>
           <p>
-            Started on 1 October 2019, this work-in-progress is an application for swapping textbooks and technical books.
+            This work-in-progress is an application for swapping textbooks and technical books.
           </p>
           <p>
             The frontend of this project is powered by ReactJS + Redux (with redux-thunk); the backend of this project is powered by Ruby on Rails (as an API) and PostgreSQL.
           </p>
-          <p>
-            Technologies this project currently includes:
-            <ol>
-                <li>OpenLibrary API for querying book information</li>
-                <li>BCrypt hashing algorithm for user password hashing (plain-text passwords not stored)</li>
-                <li>JWT & localStorage for authentication + authorization</li>
-            </ol>
-          </p>
-          <p>Technologies in the near-term roadmap:</p>
-          <ol>
-            <li>WebSockets live-chat, powered by Redis and ActionCable</li>
-            <li>Deployment via Heroku</li>
-            <li>Image upload to a separate AWS S3 instance</li>
-            <li>Responsive CSS, mainly via Material UI</li>
-          </ol>
           <p style={{ textAlign: "center" }}>
             [{" "}
             <a
@@ -49,6 +34,21 @@ export default [
             </a>{" "}
             ]
           </p>
+          <p>
+            Technologies this project currently includes:
+            <ol>
+                <li>OpenLibrary API for querying book information</li>
+                <li>BCrypt hashing algorithm for user password hashing (plain-text passwords not stored)</li>
+                <li>JWT & localStorage for authentication + authorization</li>
+            </ol>
+          </p>
+          <p>Technologies in the near-term roadmap:</p>
+          <ol>
+            <li>WebSockets live-chat, powered by Redis and ActionCable</li>
+            <li>Deployment via Heroku</li>
+            <li>Image upload to a separate AWS S3 instance</li>
+            <li>Responsive CSS, mainly via Material UI</li>
+          </ol>
         </div>
       )
     },
