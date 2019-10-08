@@ -22,12 +22,14 @@ class Portfolio extends Component {
                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
                   />
-                ) : (
+                ) : project.hasImage ?
+                (
                   <img className={this.props.size === "regular" ? "portfolioImageShowRegular" : "portfolioImageShowSmall"}
                     src={project.image}
                     alt={`${project.title} homepage`}
                   />
-                )}
+                )
+                : null }
               </center>
               <br />
               <br />
