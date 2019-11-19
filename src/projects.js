@@ -53,6 +53,44 @@ export default [
       )
     },
     {
+    title: "WMATA Train Explorer",
+    hasDemo: false,
+    hasImage: true,
+    demo: "",
+    image:
+      "https://raw.githubusercontent.com/brunogarciagonzalez/wmataExplorer/master/preview.png",
+    description: (
+      <div>
+        <p>
+          This project is powered by ReactJS and Semantic UI. It was completed
+          over a few hours, as part of a company's interview process.
+        </p>
+        <p>
+          It makes use of the WMATA API (and its default API Key), in order to showcase some ReactJS skills.
+        </p>
+        <p style={{ textAlign: "center" }}>
+          [{" "}
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://wmata-explorer.netlify.com/"
+          >
+            Live Webpage
+          </a>
+          {" // "}
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://github.com/brunogarciagonzalez/wmataExplorer"
+          >
+            Project Code
+          </a>{" "}
+          ]
+        </p>
+      </div>
+    )
+  },
+    {
     title: "Monday Home Improvement, LLC.",
     hasDemo: false,
     hasImage: true,
