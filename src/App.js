@@ -1,5 +1,4 @@
 import React, { Component, Fragment } from 'react';
-// import Feed from "rss-to-json";
 import {BrowserRouter, Route, Switch, Redirect} from "react-router-dom";
 import './App.css';
 import Navbar from './components/Navbar.js'
@@ -7,6 +6,7 @@ import HeroBlurb from './components/HeroBlurb.js'
 import BlogList from './components/BlogList.js'
 import Portfolio from './components/Portfolio.js'
 import Contact from './components/Contact.js'
+// import Feed from "rss-to-json";
 // import About from './components/About.js'
 
 const getSize = () => {
@@ -31,6 +31,7 @@ class App extends Component {
     // let proxyUrl = "https://cors-anywhere.herokuapp.com/";
     // let targetUrl = "https://medium.com/feed/@brunogarciagonzalez";
     // Feed.load(proxyUrl + targetUrl, (err, rss) => {
+    //     debugger
     //   this.setState({blogs: rss.items, blogsLoading: false})
     // })
     // event listener on window resize
@@ -54,10 +55,13 @@ class App extends Component {
     };
 
     let blogs = [
-      {url: "https://medium.com/@brunogarciagonzalez/brief-intr…ernet-396f7f91df92?source=rss-7ba0947c0034------2",
+      {url:"https://medium.com/@brunogarciagonzalez/a-tale-of-two-mindsets-b8c0dc05632c",
+       title: "A Tale of Two Mindsets: Growth vs. Fixed",
+       created: 1574971234000},
+      {url: "https://medium.com/@brunogarciagonzalez/brief-intro-architecture-of-the-internet-396f7f91df92",
       title: "TLDR: Architecture of the Internet",
       created: 1551742055000},
-      {url: "https://medium.com/@brunogarciagonzalez/reactjs-ev…ation-a295505016f1?source=rss-7ba0947c0034------2",
+      {url: "https://medium.com/@brunogarciagonzalez/reactjs-events-exploration-a295505016f1",
       title: 'ReactJS Events: “Pooling”, “Nullification”, & event.persist()',
       created: 1550079510000}
     ];
