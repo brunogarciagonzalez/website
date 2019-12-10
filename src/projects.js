@@ -2,6 +2,56 @@ import React from "react";
 
 export default [
     {
+      title: "NewsChat",
+      hasDemo: false,
+      hasImage: true,
+      demo: "",
+      image: "https://raw.githubusercontent.com/brunogarciagonzalez/news-chat-react/master/article-page.png",
+      description: (
+        <div>
+          <p>
+            This is a platform for people to chat (real-time) about articles at the top of the news cycle.
+          </p>
+          <p>
+            Technologies:
+            <ol>
+              <li>
+                ReactJS frontend application (with hooks and redux)
+              </li>
+              <li>
+                Rails API backend application (PostgreSQL as the RDBMS, ActionCable for WebSockets)
+              </li>
+              <li>
+                Leveraged NewsAPI.org for top news headlines
+              </li>
+              <li>
+                Leveraged BCrypt hashing algorithm for user data security, and JWT for Token Auth
+              </li>
+            </ol>
+          </p>          
+          <p style={{ textAlign: "center" }}>
+            [{" "}
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://github.com/brunogarciagonzalez/news-chat-rails-api"
+            >
+              Project Back End Code
+            </a>
+            {" // "}
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://github.com/brunogarciagonzalez/news-chat-react"
+            >
+              Project Front End Code
+            </a>{" "}
+            ]
+          </p>
+        </div>
+      )
+    },
+    {
       title: "BookSwap",
       hasDemo: false,
       hasImage: false,
