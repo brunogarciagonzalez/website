@@ -27,7 +27,7 @@ class App extends Component {
     }
 
   componentDidMount() {
-    console.log("Coded by Bruno Garcia Gonzalez © 2019")
+    console.log("© 2021 Bruno Garcia Gonzalez")
     // let proxyUrl = "https://cors-anywhere.herokuapp.com/";
     // let targetUrl = "https://medium.com/feed/@brunogarciagonzalez";
     // Feed.load(proxyUrl + targetUrl, (err, rss) => {
@@ -82,8 +82,8 @@ class App extends Component {
             </Fragment>
             ) }
           />
-          <Route exact path="/portfolio" component={() => (<Portfolio size={this.state.size}/>)} />
-          <Route exact path="/contact" component={() => (<Contact size={this.state.size}/>)} />
+          {/* <Route exact path="/portfolio" component={() => (<Portfolio size={this.state.size}/>)} /> */}
+          {/* <Route exact path="/contact" component={() => (<Contact size={this.state.size}/>)} /> */}
           <Route path="/*" component={() => (<Redirect to="/" />)} />
         </Switch>
         </div>

@@ -59,15 +59,11 @@ class Navbar extends Component {
                   LinkedIn
                 </a>
               </li>
-              <li>
-                <a
-                  href="https://medium.com/@brunogarciagonzalez"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Blog
-                </a>
+              <li id="Resume" onClick={this.handleResumeClick}>
+                <a href="/resume">Resume</a>
               </li>
+            </ul>
+            <ul id="nav-mobile" className="right">
               <li>
                 <a
                   href="https://github.com/brunogarciagonzalez"
@@ -77,17 +73,21 @@ class Navbar extends Component {
                   GitHub
                 </a>
               </li>
-            </ul>
-            <ul id="nav-mobile" className="right">
-              <li id="Resume" onClick={this.handleResumeClick}>
-                <a href="/resume">Resume</a>
+              <li>
+                <a
+                  href="https://medium.com/@brunogarciagonzalez"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Blog
+                </a>
               </li>
-              <li id="Portfolio" onClick={this.handleLinkClick}>
+              {/* <li id="Portfolio" onClick={this.handleLinkClick}>
                 <a href="/portfolio">Portfolio</a>
               </li>
               <li id="Contact" onClick={this.handleLinkClick}>
                 <a href="/contact">Contact</a>
-              </li>
+              </li> */}
             </ul>
           </div>
         </nav>
@@ -138,7 +138,7 @@ class Navbar extends Component {
                       >
                         <Dropdown.Item>Blog</Dropdown.Item>
                       </a>
-                      <a
+                      {/* <a
                         id="Portfolio"
                         href="/portfolio"
                         onClick={this.handleLinkClick}
@@ -151,7 +151,7 @@ class Navbar extends Component {
                         onClick={this.handleLinkClick}
                       >
                         <Dropdown.Item>Contact</Dropdown.Item>
-                      </a>
+                      </a> */}
                     </Dropdown.Menu>
                   </Dropdown>
                 </a>
